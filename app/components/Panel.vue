@@ -34,7 +34,7 @@ $blue: #037
 $brown: #a52a2a
 
 #panel
-  bottom: 5%
+  bottom: 0%
   height: $keyboard-height
   position: absolute
   width: $keyboard-width
