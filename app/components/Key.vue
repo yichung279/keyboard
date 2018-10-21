@@ -20,8 +20,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import '../../node_modules/normalize-scss/sass/normalize'
-@include normalize()
+
 
 $keyboard-width: 100vw
 
@@ -54,7 +53,7 @@ $brown: #a52a2a
     text-align: center
 
     .key
-      background: url('../../res/button.png')
+      background: url('../../static/button.png')
       display: inline-block
       font-size: 9vw
       font-weight: bolder
