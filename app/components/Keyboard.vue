@@ -1,12 +1,12 @@
 <template lang="pug">
 div#keyboard
-  div(class="button -dark center" v-if="status.start == 1" v-on:click="start") Start
+  div(class="button -dark center" v-if="status.start == 1" v-on:click="gameHandler") Start
   div(class="button -dark center" v-if="status.stop == 1" v-on:click="stop") Stop
   div(class="button -dark center" v-if="status.send == 1" v-on:click="send") Send
   div(class="button -dark center" v-if="status.restart == 1" v-on:click="restart")#on-button Restart
 
   Countdown(ref="countdown")
-  Panel
+  Panel(ref="panel")
 </template>
 
 <script>
@@ -51,6 +51,9 @@ export default {
       this.status.send = 0;
       this.$refs.countdown.restart();
     },
+    gameHandler: function () {
+      this.$refs.panel.gameHandler();
+    }
   },
   components: {
     Countdown,

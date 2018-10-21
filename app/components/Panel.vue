@@ -3,31 +3,60 @@ div
   div#panel
     .button-container
       each key in ['q','w','e','r','t','y','u','i','o','p']
-        .key(id=key v-on:click="hit")
+        .key(id=key v-on:click="hit") {{ key }}
     .button-container
       each key in ['a','s','d','f','g','h','j','k','l']
-        .key(id=key v-on:click="hit")
+        .key(id=key v-on:click="hit") {{ key }}
     .button-container
       each key in ['z','x','c','v','b','n','m']
-        .key(id=key v-on:click="hit")
+        .key(id=key v-on:click="hit") {{ key }}
     .button-container
       .key(v-on:click="hit")#space
 </template>
 
 <script>
+var keys= [
+  'q','w','e','r','t','y','u','i','o','p',
+  'a','s','d','f','g','h','j','k','l',
+  'z','x','c','v','b','n','m'
+];
 export default {
   name: 'panel',
   data() {
     return {
-      exp: {}
+      regenerate: 1,
     };
   },
   methods: {
     hit(event) {
       console.log(event.pageX);
       console.log(event.pageY);
+      this.$parent.$refs.countdown.start();
+      if (this.regenerate === 1) {       
+        console.log("dsdsd");
+      }
+    },
+    gameHandler() {
+      if (this.regenerate === 1) {       
+        console.log("dsdsd");
+        this.generate();
+      }
+    },
+    generate() {
+      var rand = this.shuffle(keys);
+      console.log(rand.slice(0, 6))
+    },
+    shuffle(array) {
+      var result = [], source = array.concat([]);
+
+      while (source.length) {
+        let index = Math.floor(Math.random() * source.length);
+        result.push(source[index]);
+        source.splice(index, 1);
+      }
+      return result;
     }
-}
+  }
 };
 </script>
 
