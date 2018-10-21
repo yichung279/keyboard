@@ -37,5 +37,4 @@ body
   font-family: 'Roboto', sans-serif
   overflow-x: hidden
   overflow-y: hidden
-  position: relative
 </style>
