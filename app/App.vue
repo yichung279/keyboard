@@ -30,11 +30,9 @@ export default {
   --button-font-size: 20px
   --clock-font-size: 55px
 html
-  overflow-x: hidden
-  overflow-y: hidden
+  overflow: hidden
 body
   background-color: #e4e4e4
   font-family: 'Roboto', sans-serif
-  overflow-x: hidden
-  overflow-y: hidden
+  overflow: hidden
 </style>
