@@ -39,6 +39,7 @@ $brown: #a52a2a
   height: $keyboard-height
   position: absolute
   width: $keyboard-width
+  background-color: #191919
   .row
     margin-top: $vertical-gap
     text-align: center
