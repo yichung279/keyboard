@@ -34,5 +34,6 @@ html
 body
   background-color: #e4e4e4
   font-family: 'Roboto', sans-serif
+  height: 100%
   overflow: hidden
 </style>
