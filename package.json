@@ -1,17 +1,22 @@
 {
   "name": "keyboard",
   "version": "1.0.0",
-  "main": "index.js",
   "author": "alanaudi <alanaudi.tw@gmail.com>",
   "license": "MIT",
   "scripts": {
     "parcel": "./node_modules/parcel-bundler/bin/cli.js app/index.pug"
   },
   "devDependencies": {
+    "@vue/component-compiler-utils": "^2.2.0",
     "parcel-bundler": "^1.10.3",
-    "pug": "^2.0.3"
+    "pug": "^2.0.3",
+    "sass": "^1.14.3",
+    "vue-router": "^3.0.1",
+    "vue-template-compiler": "^2.5.17"
   },
   "dependencies": {
-    "vue": "^2.5.17"
+    "randomstring": "^1.1.5",
+    "vue": "^2.5.17",
+    "vue-hot-reload-api": "^2.3.1"
   }
 }
