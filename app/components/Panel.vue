@@ -3,20 +3,31 @@ div
   div#panel
     .button-container
       each key in ['q','w','e','r','t','y','u','i','o','p']
-        .key(id=key)
+        .key(id=key v-on:click="hit")
     .button-container
       each key in ['a','s','d','f','g','h','j','k','l']
-        .key(id=key)
+        .key(id=key v-on:click="hit")
     .button-container
       each key in ['z','x','c','v','b','n','m']
-        .key(id=key)
+        .key(id=key v-on:click="hit")
     .button-container
-      .key#space
+      .key(v-on:click="hit")#space
 </template>
 
 <script>
 export default {
-    
+  name: 'panel',
+  data() {
+    return {
+      exp: {}
+    };
+  },
+  methods: {
+    hit(event) {
+      console.log(event.pageX);
+      console.log(event.pageY);
+    }
+}
 };
 </script>
 
@@ -55,7 +66,8 @@ $brown: #a52a2a
     position: relative
     width: $key-width
     height: $key-height
-    margin-left: $horizontal-gap
+    margin-left: $horizontal-gap/2
+    margin-right: $horizontal-gap/2
     background-color: $key-color
     font-size: 9vw
   #space
