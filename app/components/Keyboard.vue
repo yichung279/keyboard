@@ -10,6 +10,7 @@ div#keyboard
 
 <script>
 import Countdown from './Countdown.vue'
+import Key from './Key.vue'
 
 export default {
   name: 'keyboard',
@@ -51,63 +52,54 @@ export default {
     },
   },
   components: {
-    Countdown
+    Countdown,
+    Key
   }
 };
 </script>
-
-<style>
-.button {
-  font-family: Roboto Slab, sans-serif;
-  display: flex;
-  overflow: hidden;
-  margin: 10px;
-  padding: 12px 12px;
-  cursor: pointer;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  transition: all 150ms linear;
-  text-align: center;
-  white-space: nowrap;
-  text-decoration: none !important;
-  text-transform: none;
-  text-transform: capitalize;
-  color: #fff;
-  border: 0 none;
-  border-radius: 4px;
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 1.3;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  justify-content: center;
-  align-items: center;
-  flex: 0 0 160px;
-  box-shadow: 2px 5px 10px #e4e4e4;
-}
-
-.button:hover {
-  transition: all 150ms linear;
-  opacity: .85;
-}
-.button:active {
-  transition: all 150ms linear;
-  opacity: .75;
-}
-.button:focus {
-  outline: 1px dotted #959595;
-  outline-offset: -4px;
-}
-
-.button.-dark {
-  color: #e4e4e4;
-  background: #161616;
-}
-.button.-dark:focus {
-  outline: 1px dotted #e4e4e4;
-  outline-offset: -4px;
-}
+<style lang="sass">
+.button
+  display: flex
+  overflow: hidden
+  margin: 10px
+  padding: 12px 12px
+  cursor: pointer
+  -webkit-user-select: none
+  -moz-user-select: none
+  -ms-user-select: none
+  user-select: none
+  transition: all 150ms linear
+  text-align: center
+  white-space: nowrap
+  text-decoration: none !important
+  text-transform: none
+  text-transform: capitalize
+  color: #fff
+  border: 0 none
+  border-radius: 4px
+  font-size: var(--button-font-size)
+  font-weight: 500
+  line-height: 1.3
+  -webkit-appearance: none
+  -moz-appearance: none
+  appearance: none
+  justify-content: center
+  align-items: center
+  flex: 0 0 160px
+  box-shadow: 2px 5px 10px #e4e4e4
+  &:hover
+    transition: all 150ms linear
+    opacity: .85
+  &:active
+    transition: all 150ms linear
+    opacity: .75
+  &:focus
+    outline: 1px dotted #959595
+    outline-offset: -4px
+  &.-dark
+    color: var(--color-smoke)
+    background: var(--color-dark)
+    &:focus
+      outline: 1px dotted var(--color-smoke)
+      outline-offset: -4px
 </style>
