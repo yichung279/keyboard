@@ -3,13 +3,13 @@ div
   div#panel
     .row
       each key in ['q','w','e','r','t','y','u','i','o','p']
-        .key(id=key)
+        .key(id=key) key
     .row
       each key in ['a','s','d','f','g','h','j','k','l']
-        .key(id=key)
+        .key(id=key) key
     .row
       each key in ['z','x','c','v','b','n','m']
-        .key(id=key)
+        .key(id=key) key
     .row: .key#space
 </template>
 

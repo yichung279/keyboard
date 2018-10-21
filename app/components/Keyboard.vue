@@ -11,7 +11,6 @@ div#keyboard
 
 <script>
 import Countdown from './Countdown.vue'
-import Key from './Key.vue'
 import Panel from './Panel.vue'
 
 export default {
@@ -55,7 +54,6 @@ export default {
   },
   components: {
     Countdown,
-    Key,
     Panel
   }
 };

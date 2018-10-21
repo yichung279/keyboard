@@ -4,7 +4,6 @@ import RandomString from 'randomstring';
 
 import App from './App.vue';
 import Keyboard from './components/Keyboard.vue';
-import Key from './components/Key.vue'
 import Panel from './components/Panel.vue'
 
 Vue.use(VueRouter);

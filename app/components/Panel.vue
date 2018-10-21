@@ -28,10 +28,17 @@ $key-width: .48 / 5.8 * $keyboard-width
 $horizontal-gap: ($keyboard-width - $key-width * 10) / 11
 $vertical-gap: ($keyboard-height - $key-height * 4) / 5
 
-$key-color: #59656f
+$key-color: #C4CAD0
 $red: #800
 $blue: #037
 $brown: #a52a2a
+
+#panel
+  bottom: 5%
+  height: $keyboard-height
+  position: absolute
+  width: $keyboard-width
+  background: url('../../static/panel.png')
 
 .button-container
   position: relative
@@ -44,11 +51,13 @@ $brown: #a52a2a
   justify-content: center
   align-items: center
   .key
+    color: #fff
     position: relative
     width: $key-width
     height: $key-height
     margin-left: $horizontal-gap
     background-color: $key-color
+    font-size: 9vw
   #space
     margin-left: $key-width + $horizontal-gap
     width: 4 * $key-width + 3 * $horizontal-gap
