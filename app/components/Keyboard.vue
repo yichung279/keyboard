@@ -6,6 +6,7 @@ div#keyboard
   div(class="button -dark center" v-if="status.restart == 1" v-on:click="restart")#on-button Restart
 
   Countdown(ref="countdown")
+  Key
 </template>
 
 <script>
