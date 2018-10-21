@@ -6,12 +6,13 @@ div#keyboard
   div(class="button -dark center" v-if="status.restart == 1" v-on:click="restart")#on-button Restart
 
   Countdown(ref="countdown")
-  Key
+  Panel
 </template>
 
 <script>
 import Countdown from './Countdown.vue'
 import Key from './Key.vue'
+import Panel from './Panel.vue'
 
 export default {
   name: 'keyboard',
@@ -54,11 +55,15 @@ export default {
   },
   components: {
     Countdown,
-    Key
+    Key,
+    Panel
   }
 };
 </script>
 <style lang="sass">
+@import '../../node_modules/normalize-scss/sass/normalize'
+@include normalize()
+
 .button
   display: flex
   overflow: hidden

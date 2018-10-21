@@ -14,8 +14,7 @@ export default {
 </script>
 
 <style lang="sass">
-@import '../node_modules/normalize-scss/sass/normalize'
-@include normalize()
+
 
 \:root
   --color-dark: #161616
@@ -32,7 +31,7 @@ export default {
 
 html
   overflow: hidden
-  
+
 body
   background-color: #e4e4e4
   font-family: 'Roboto', sans-serif
