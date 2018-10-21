@@ -29,8 +29,10 @@ export default {
   --color-smoke: #e4e4e4
   --button-font-size: 20px
   --clock-font-size: 55px
+
 html
   overflow: hidden
+  
 body
   background-color: #e4e4e4
   font-family: 'Roboto', sans-serif

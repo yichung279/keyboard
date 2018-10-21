@@ -23,8 +23,6 @@ export default {
 
 
 $keyboard-width: 100vw
-
-// see res/size.png
 $keyboard-height: 3.5 / 5.8 * $keyboard-width
 $key-height: .75 / 5.8 * $keyboard-width
 $key-width: .48 / 5.8 * $keyboard-width
@@ -36,22 +34,14 @@ $red: #800
 $blue: #037
 $brown: #a52a2a
 
-[data-role='page']
-  box-sizing: border-box
-  padding: .5em
-
-
 #panel
-  bottom: 0
+  bottom: 10%
   height: $keyboard-height
-  left: 0
   position: absolute
   width: $keyboard-width
-
   .row
     margin-top: $vertical-gap
     text-align: center
-
     .key
       background: url('../../static/button.png')
       display: inline-block
@@ -61,23 +51,14 @@ $brown: #a52a2a
       line-height: $key-height
       vertical-align: top
       width: $key-width
-
       &.red
         color: $red
-
       &.blue
         color: $blue
-
     .key+.key
       margin-left: $horizontal-gap
-
   #space
     margin-left: $key-width + $horizontal-gap
     width: 4 * $key-width + 3 * $horizontal-gap
-
-#timer
-  color: $brown
-  font-size: 7vw
-  text-align: center
 </style>
 
