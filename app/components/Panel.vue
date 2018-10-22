@@ -2,14 +2,11 @@
 div
   div#panel
     .button-container
-      each key in ['q','w','e','r','t','y','u','i','o','p']
-        .key(id=key v-on:click="hit") {{ key }}
+      .key(v-for="key in keys.row1" :id="key" v-on:click="hit") {{ key }}
     .button-container
-      each key in ['a','s','d','f','g','h','j','k','l']
-        .key(id=key v-on:click="hit") {{ key }}
+      .key(v-for="key in keys.row2" :id="key" v-on:click="hit") {{ key }}
     .button-container
-      each key in ['z','x','c','v','b','n','m']
-        .key(id=key v-on:click="hit") {{ key }}
+      .key(v-for="key in keys.row3" :id="key" v-on:click="hit") {{ key }}
     .button-container
       .key(v-on:click="hit")#space
 </template>
@@ -25,6 +22,11 @@ export default {
   data() {
     return {
       regenerate: 1,
+      keys: {
+        row1: ['q','w','e','r','t','y','u','i','o','p'],
+        row2: ['a','s','d','f','g','h','j','k','l'],
+        row3: ['z','x','c','v','b','n','m']
+      }
     };
   },
   methods: {
