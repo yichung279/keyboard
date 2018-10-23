@@ -53,6 +53,7 @@ export default {
     },
     gameHandler: function () {
       this.$refs.panel.gameHandler();
+      this.start();
     }
   },
   components: {

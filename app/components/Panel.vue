@@ -10,7 +10,6 @@ div
     .button-container
       .key(v-on:click="hit")#space
 </template>
-
 <script>
 var keys= [
   'q','w','e','r','t','y','u','i','o','p',
@@ -22,6 +21,7 @@ export default {
   data() {
     return {
       regenerate: 1,
+      keys_6: [],
       keys: {
         row1: ['q','w','e','r','t','y','u','i','o','p'],
         row2: ['a','s','d','f','g','h','j','k','l'],
@@ -33,9 +33,8 @@ export default {
     hit(event) {
       console.log(event.pageX);
       console.log(event.pageY);
-      this.$parent.$refs.countdown.start();
       if (this.regenerate === 1) {       
-        console.log("dsdsd");
+        console.log("regenerate");
       }
     },
     gameHandler() {
@@ -45,12 +44,11 @@ export default {
       }
     },
     generate() {
-      var rand = this.shuffle(keys);
-      console.log(rand.slice(0, 6))
+      this.keys_6 = this.shuffle(keys);
+      console.log(this.keys_6.slice(0, 6))
     },
     shuffle(array) {
       var result = [], source = array.concat([]);
-
       while (source.length) {
         let index = Math.floor(Math.random() * source.length);
         result.push(source[index]);
@@ -61,7 +59,6 @@ export default {
   }
 };
 </script>
-
 <style lang="sass">
 $keyboard-width: 100vw
 $keyboard-height: 3.5 / 5.8 * $keyboard-width
@@ -105,4 +102,3 @@ $brown: #a52a2a
     margin-left: $key-width + $horizontal-gap
     width: 4 * $key-width + 3 * $horizontal-gap
 </style>
-
