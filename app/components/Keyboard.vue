@@ -4,7 +4,7 @@ div#keyboard
   div(class="button -dark center" v-if="status.stop == 1" v-on:click="stop") Stop
   div(class="button -dark center" v-if="status.send == 1" v-on:click="send") Send
   div(class="button -dark center" v-if="status.restart == 1" v-on:click="restart")#on-button Restart
-
+  Arrow
   Countdown(ref="countdown")
   Panel(ref="panel")
 </template>
@@ -12,6 +12,7 @@ div#keyboard
 <script>
 import Countdown from './Countdown.vue'
 import Panel from './Panel.vue'
+import Arrow from './Arrow.vue'
 
 export default {
   name: 'keyboard',
@@ -58,7 +59,8 @@ export default {
   },
   components: {
     Countdown,
-    Panel
+    Panel,
+    Arrow
   }
 };
 </script>
